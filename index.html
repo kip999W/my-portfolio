@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Frontend Dev</title>
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<!-- Styles -->
+		<link rel="stylesheet" href="./css/reset.css">
+		<link rel="stylesheet" href="./css/main.css">
+		<!-- Swiper -->
+		<link rel="stylesheet" href="./vendor/swiper/swiper-bundle.min.css">
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="./assets/icons/favicon/site.webmanifest" />
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+		<!-- Scripts -->
+		<script src="./vendor/swiper/swiper-bundle.min.js" defer></script>
+		<script src="./js/app.js" defer></script>
+	</head> 
+	<body>
+		<nav class="navbar fixed-top">
+			<div class="container">
+				<a class="navbar-brand" href="./">Logo.</a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+					<div class="offcanvas-header">
+						<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo.</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+					</div>
+
+					<div class="offcanvas-body">
+						<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="./">Главная</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#about">Обо мне</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#projects">Проекты</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#contacts">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="swiper slider" id="main">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide">
+					<img
+						src="./assets/img/slideCode.png"
+						class="slide__image"
+						loading="lazy"
+						alt="Превращаю код в удобные интерфейсы"
+					/>
+
+					<div class="slide__overlay"></div>
+					<div class="slide__content">
+						<h2>Превращаю код в удобные интерфейсы</h2>
+						<p>Привет! Я начинающий Frontend-разработчик. Создаю быстрые, адаптивные и современные веб-сайты, уделяя особое внимание деталям и чистоте кода.</p>
+						<a href="#projects" class="btn">Смотреть проекты</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<img
+						src="./assets/img/slideSkills.png"
+						class="slide__image"
+						loading="lazy"
+						alt="Чистый код и современные технологии"
+					/>
+
+					<div class="slide__overlay"></div>
+					<div class="slide__content">
+						<h2>Чистый код и современные технологии</h2>
+						<p>В работе использую HTML5, CSS3 и JavaScript. Люблю верстать адаптивные макеты, писать поддерживаемый код и постоянно изучать новые инструменты.</p>
+						<a href="#about" class="btn">Мои навыки</a>
+					</div>
+				</div>
+
+				<div class="swiper-slide slide">
+					<img
+						src="./assets/img/slideContact.png"
+						class="slide__image"
+						loading="lazy"
+						alt="Открыт к новым возможностям"
+					/>
+
+					<div class="slide__overlay"></div>
+					<div class="slide__content">
+						<h2>Открыт к новым возможностям</h2>
+						<p>Сейчас я активно ищу первую работу или стажировку. Готов к реальным задачам, быстро обучаюсь и хочу развиваться в коммерческой разработке.</p>
+						<a href="#contacts" class="btn">Связаться со мной</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="slider-bottom">
+				<div class="slider-pagination swiper-pagination"></div>
+				<div class="slider-navigation">
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+			</div>
+
+			<svg class="wave-divider" viewBox="0 0 1440 320" preserveAspectRatio="none">
+				<path fill="#232830" d="M0,256L48,224C96,192,192,128,288,128C384,128,480,192,576,224C672,256,768,256,864,224C960,192,1056,128,1152,96C1248,64,1344,64,1392,80L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+			</svg>
+		</div>
+
+		<section class="about-section" id="about">
+			<div class="container">
+				<h2 class="title-1">Обо мне</h2>
+
+				<div class="about-section__content">
+					<div class="about-section__content--img">
+						<img src="./assets/img/about/about.png" alt="Обо мне">
+					</div>
+					
+					<div class="about-section__content--text">
+						<p>Привет! Я <strong>Виктор Лунегов</strong>, начинающий Frontend-разработчик 
+          	из Кемерово. Увлечен созданием красивых и функциональных веб-интерфейсов.</p>
+						<p>Сейчас активно изучаю JavaScript и современные CSS-технологии. 
+          	Мне нравится превращать сложные задачи в простые и элегантные решения.</p>
+						<p>В свободное время читаю техническую литературу и экспериментирую 
+          	с новыми инструментами.</p>
+					</div>
+				</div>
+
+				<div class="about-section__skills">
+					<h3 class="about-section__skills--title">Мои навыки</h3>
+
+					<div class="about-section__skills--list">
+						<span class="skill-tag">HTML5</span>
+						<span class="skill-tag">CSS3</span>
+						<span class="skill-tag">JavaScript</span>
+						<span class="skill-tag">Git</span>
+						<span class="skill-tag">Figma</span>
+						<span class="skill-tag">Responsive Design</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="projects-section" id="projects">
+			<div class="container">
+				<h2 class="title-1">Мои проекты</h2>
+			</div>
+		</section>
+
+		<section class="contact-section" id="contacts">
+			<div class="container">
+				<h2 class="title-1">Мои контакты</h2>
+				<p class="contact-section__subtitle text-center">Готов к сотрудничеству и новым проектам. Напишите мне — обсудим вашу задачу!</p>
+
+				<div class="contact-section__form--wrapper">
+					<form action="#" method="post" class="contact-section__form" id="contactForm" novalidate>
+						<div class="mb-3">
+							<label for="name" class="form-label">Ваше имя</label>
+							<input type="text" class="form-control contact-section__input" id="name" placeholder="Иван Иванов" required>
+							<div class="invalid-feedback" id="nameError"></div>
+						</div>
+
+						<div class="mb-3">
+							<label for="email" class="form-label">Email</label>
+							<input type="email" class="form-control contact-section__input" id="email" placeholder="example@mail.com" required>
+							<div class="invalid-feedback" id="emailError">Пожалуйста, введите корректный email</div>
+						</div>
+
+						<div class="mb-3">
+							<label for="subject" class="form-label">Тема сообщения</label>
+							<input type="text" class="form-control contact-section__input" id="subject" placeholder="Предложение о работе" required>
+							<div class="invalid-feedback" id="subjectError">Пожалуйста, введите тему</div>
+						</div>
+
+						<div class="mb-3">
+							<label for="message" class="form-label">Сообщение</label>
+							<textarea class="form-control contact-section__input" id="message" rows="5" placeholder="Расскажите о вашем проекте..." required></textarea>
+							<div class="invalid-feedback" id="messageError">Пожалуйста, введите сообщение</div>
+						</div>
+
+						<button type="submit" class="btn contact-section__btn w-100">Отправить сообщение</button>
+						<div class="contact-section__success-message" id="successMessage">✓ Сообщение успешно отправлено! Я свяжусь с вами в ближайшее время.</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-col">
+					<h3 class="footer-logo">LOGO.</h3>
+					<p class="footer-text">Начинающий разработчик. Постоянно учусь, экспериментирую и создаю новые проекты.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Разделы</h4>
+					<ul>
+						<li><a href="#main">Главная</a></li>
+						<li><a href="#about">Обо мне</a></li>
+						<li><a href="#projects">Мои проекты</a></li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Контакты</h4>
+					<p>Email: info@example.com</p>
+					<p>Телефон: +7 (999) 000-00-00</p>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>© 2026 LOGO.RU Все права защищены.</p>
+			</div>
+		</footer>
+
+		<div class="page-actions">
+			<button type="button" class="page-actions__btn" id="theme-toggle" aria-label="Переключить тему">
+				<img src="./assets/icons/sun.png" alt="Светлая тема" class="page-actions__icon page-actions__icon--sun">
+				<img src="./assets/icons/moon.png" alt="Тёмная тема" class="page-actions__icon page-actions__icon--moon">
+			</button>
+
+			<button type="button" class="btnTop">
+				<img src="./assets/icons/up.png" alt="UP">
+			</button>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/render.js"></script>
+	</body>
+</html>
